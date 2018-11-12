@@ -170,6 +170,9 @@ public class ComplexTest {
 
     @Test
     void testPow(){
+        assertEquals(twoI, onePlusI.pow(2));
+        assertEquals(Complex.ONE, minusOne.pow(2));
+        assertEquals(Complex.ONE,twoPlustwoI.pow(0));
 
     }
 
