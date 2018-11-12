@@ -175,5 +175,12 @@ public class ComplexTest {
         assertEquals(Complex.ONE,twoPlustwoI.pow(0));
 
     }
+    @Test
+     void testScale() {
+        assertEquals(Complex.ONE, Complex.ONE.reciprocal());
+        assertEquals(Complex.I, minusI.reciprocal());
+        assertEquals(new Complex(0.5, 0), two.reciprocal());
+        assertEquals(new Complex(0.5, 0.5), oneMinusI.reciprocal());
+    }
 
 }
