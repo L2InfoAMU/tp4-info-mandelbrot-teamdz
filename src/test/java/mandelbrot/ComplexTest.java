@@ -149,4 +149,10 @@ public class ComplexTest {
         assertEquals(new Complex(real +3,imaginary+3),
                 new Complex(real, imaginary).add(new Complex(3,3)));
     }
+    @Test
+    void  testMultiply(){
+        assertEquals(onePlusI, onePlusI.multiply(Complex.ONE));
+        assertEquals(Complex.ONE, new Complex(0.5, 0).multiply(two));
+        assertEquals(oneMinusI,minusI.multiply(onePlusI));
+    }
 }
