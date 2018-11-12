@@ -13,6 +13,7 @@ public class ComplexTest {
     private final Complex oneMinusI = new Complex(1, -1);
     private final Complex twoI = new Complex(0,2);
     private final Complex two = new Complex(2,0);
+    private final Complex twoC = new Complex(2,2);
     private final Complex three = Complex.real(-12);
 
 
@@ -140,5 +141,12 @@ public class ComplexTest {
     void testReal(){
         assertEquals(real,three.getReal());
         assertEquals(0,three.getImaginary());
+    }
+    @Test
+    void testAdd(){
+        assertEquals(twoC, two.add(twoI));
+        assertEquals(Complex.ONE, onePlusI.add(minusI));
+        assertEquals(new Complex(real +3,imaginary+3),
+                new Complex(real, imaginary).add(new Complex(3,3)));
     }
 }
