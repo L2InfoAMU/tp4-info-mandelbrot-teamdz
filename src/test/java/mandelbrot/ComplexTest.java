@@ -161,4 +161,16 @@ public class ComplexTest {
         assertEquals(1, minusOne.squaredModulus());
         assertEquals(8,twoPlustwoI.squaredModulus());
     }
+    @Test
+    void testModulus(){
+        assertEquals(Math.sqrt(2), onePlusI.modulus());
+        assertEquals(Math.sqrt(1), minusOne.modulus());
+        assertEquals(Math.sqrt(8),twoPlustwoI.modulus());
+    }
+
+    @Test
+    void testPow(){
+
+    }
+
 }
