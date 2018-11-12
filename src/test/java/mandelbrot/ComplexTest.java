@@ -177,10 +177,15 @@ public class ComplexTest {
     }
     @Test
      void testScale() {
-        assertEquals(Complex.ONE, Complex.ONE.reciprocal());
-        assertEquals(Complex.I, minusI.reciprocal());
-        assertEquals(new Complex(0.5, 0), two.reciprocal());
-        assertEquals(new Complex(0.5, 0.5), oneMinusI.reciprocal());
+        assertEquals(twoPlustwoI, onePlusI.scale(2));
+        assertEquals(new Complex(5*7, 5*8), new Complex(7,8).scale(5));
+        assertEquals(new Complex(4*3, 4*6), new Complex(3,6).scale(4));
+    }
+    @Test
+    void testEquals() {
+        assertEquals(twoPlustwoI, onePlusI.scale(2));
+        assertEquals(new Complex(5*7, 5*8), new Complex(7,8).scale(5));
+        assertEquals(new Complex(4*3, 4*6), new Complex(3,6).scale(4));
     }
 
 }
