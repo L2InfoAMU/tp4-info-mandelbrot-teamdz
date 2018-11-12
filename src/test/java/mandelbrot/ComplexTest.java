@@ -13,7 +13,7 @@ public class ComplexTest {
     private final Complex oneMinusI = new Complex(1, -1);
     private final Complex twoI = new Complex(0,2);
     private final Complex two = new Complex(2,0);
-    private final Complex twoC = new Complex(2,2);
+    private final Complex twoPlustwoI = new Complex(2,2);
     private final Complex three = Complex.real(-12);
 
 
@@ -144,7 +144,7 @@ public class ComplexTest {
     }
     @Test
     void testAdd(){
-        assertEquals(twoC, two.add(twoI));
+        assertEquals(twoPlustwoI, two.add(twoI));
         assertEquals(Complex.ONE, onePlusI.add(minusI));
         assertEquals(new Complex(real +3,imaginary+3),
                 new Complex(real, imaginary).add(new Complex(3,3)));
@@ -154,5 +154,11 @@ public class ComplexTest {
         assertEquals(onePlusI, onePlusI.multiply(Complex.ONE));
         assertEquals(Complex.ONE, new Complex(0.5, 0).multiply(two));
         assertEquals(oneMinusI,minusI.multiply(onePlusI));
+    }
+    @Test
+    void testSquaredModulus(){
+        assertEquals(2, onePlusI.squaredModulus());
+        assertEquals(1, minusOne.squaredModulus());
+        assertEquals(8,twoPlustwoI.squaredModulus());
     }
 }
