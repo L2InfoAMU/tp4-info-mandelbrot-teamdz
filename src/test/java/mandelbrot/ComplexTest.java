@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-private class ComplexTest {
+public class ComplexTest {
     private final Complex onePlusI = new Complex(1,1);
     private final Complex minusI = new Complex(0,-1);
     private final Complex minusOne = new Complex(-1,0);
